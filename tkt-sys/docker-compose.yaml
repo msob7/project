@@ -33,7 +33,7 @@ services:
     image: phpmyadmin/phpmyadmin
     restart: always
     ports:
-      - "8080:80"
+      - "5000"
     environment:
       PMA_HOST: mysql_database
       MYSQL_ROOT_PASSWORD: 1234
