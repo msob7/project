@@ -1,0 +1,43 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKERHUB_CREDENTIALS = credentials('dockerhub')
+    }
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                checkout scm
+            }
+        }
+
+        stage('Docker Login') {
+            steps {
+                sh '''
+                echo $DOCKERHUB_CREDENTIALS_PSW | docker login \
+                -u $DOCKERHUB_CREDENTIALS_USR \
+                --password-stdin
+                '''
+            }
+        }
+
+        stage('Build Image') {
+            steps {
+                sh '''
+                cd project2/go-app
+                docker build -t your-dockerhub-username/go-app:latest -f dockerfile-prod .
+                '''
+            }
+        }
+
+        stage('Push Image') {
+            steps {
+                sh '''
+                docker push your-dockerhub-username/go-app:latest
+                '''
+            }
+        }
+    }
+}
