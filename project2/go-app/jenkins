@@ -3,22 +3,16 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = credentials('dockerhub')
+        IMAGE_NAME = "msob7/go-app:latest"
     }
 
     stages {
-
-        stage('Checkout') {
-            steps {
-                checkout scm
-            }
-        }
-
         stage('Docker Login') {
             steps {
                 sh '''
                 echo $DOCKERHUB_CREDENTIALS_PSW | docker login \
-                -u $DOCKERHUB_CREDENTIALS_USR \
-                --password-stdin
+                  -u $DOCKERHUB_CREDENTIALS_USR \
+                  --password-stdin
                 '''
             }
         }
@@ -27,7 +21,7 @@ pipeline {
             steps {
                 sh '''
                 cd project2/go-app
-                docker build -t your-dockerhub-username/go-app:latest -f dockerfile-prod .
+                docker build -t $IMAGE_NAME -f dockerfile-prod .
                 '''
             }
         }
@@ -35,7 +29,7 @@ pipeline {
         stage('Push Image') {
             steps {
                 sh '''
-                docker push your-dockerhub-username/go-app:latest
+                docker push $IMAGE_NAME
                 '''
             }
         }
