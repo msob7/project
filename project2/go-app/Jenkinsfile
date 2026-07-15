@@ -21,7 +21,7 @@ pipeline {
             steps {
                 sh '''
                 cd project2/go-app
-                docker build -t $IMAGE_NAME -f dockerfile-prod .
+                docker build -t $IMAGE_NAME -f Dockerfile-prod .
                 '''
             }
         }
