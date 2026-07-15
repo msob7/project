@@ -3,7 +3,7 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = credentials('Dockerhub')
-        IMAGE_NAME = "msob7/go-app:latest"
+        IMAGE_NAME = "sob7/go-app:latest"
     }
 
     stages {
