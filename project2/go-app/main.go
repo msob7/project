@@ -9,7 +9,7 @@ import (
 func main() {
     http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
         hostname, _ := os.Hostname()
-        fmt.Fprintf(w, "Hello from Go!\nHostname: %s\n", hostname)
+        fmt.Fprintf(w, "Hellomohamed sobh!\nHostname: %s\n", hostname)
     })
     
     http.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
