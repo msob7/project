@@ -2,7 +2,7 @@ services:
   frontend:
     image: nginx:latest
     ports:
-      - "8080:80"
+      - "8090:80"
     volumes:
       - ./frontend:/usr/share/nginx/html:ro
     networks:
