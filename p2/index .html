@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohamed Sobh | DevOps Engineer</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#0f172a;
+    color:#fff;
+    line-height:1.6;
+}
+
+header{
+    background:#111827;
+    position:sticky;
+    top:0;
+    z-index:100;
+}
+
+nav{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+.hero{
+    height:90vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:20px;
+}
+
+.hero h1{
+    font-size:55px;
+}
+
+.hero h2{
+    color:#38bdf8;
+    margin:15px 0;
+}
+
+.hero p{
+    max-width:700px;
+    margin:auto;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 25px;
+    background:#38bdf8;
+    color:#000;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+section{
+    padding:80px 20px;
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    text-align:center;
+    font-size:35px;
+    margin-bottom:40px;
+    color:#38bdf8;
+}
+
+.skills{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.skill{
+    background:#1e293b;
+    padding:20px;
+    text-align:center;
+    border-radius:10px;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:25px;
+}
+
+.project{
+    background:#1e293b;
+    padding:20px;
+    border-radius:10px;
+}
+
+.project h3{
+    color:#38bdf8;
+}
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#111827;
+}
+
+.social a{
+    color:#38bdf8;
+    margin:10px;
+    text-decoration:none;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:38px;
+}
+
+nav{
+flex-direction:column;
+}
+
+nav ul{
+margin-top:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+}
+</style>
+
+</head>
+<body>
+
+<header>
+
+<nav>
+
+<h2>Mohamed Sobh</h2>
+
+<ul>
+
+<li><a href="#about">About</a></li>
+
+<li><a href="#skills">Skills</a></li>
+
+<li><a href="#projects">Projects</a></li>
+
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div>
+
+<h1>Mohamed Sobh</h1>
+
+<h2>Senior DevOps Engineer</h2>
+
+<p>
+
+Experienced DevOps Engineer with expertise in AWS, Docker,
+Kubernetes, Terraform, Jenkins, Linux, CI/CD Pipelines,
+Monitoring, and Infrastructure Automation.
+
+</p>
+
+<a class="btn" href="cv.pdf">Download CV</a>
+
+</div>
+
+</section>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<p>
+
+I am a DevOps Engineer with extensive experience in
+Infrastructure, Automation, Cloud Computing, CI/CD,
+Containerization, and System Administration.
+I enjoy building scalable, secure, and automated environments.
+
+</p>
+
+</section>
+
+<section id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="skills">
+
+<div class="skill">AWS</div>
+
+<div class="skill">Docker</div>
+
+<div class="skill">Kubernetes</div>
+
+<div class="skill">Terraform</div>
+
+<div class="skill">Jenkins</div>
+
+<div class="skill">Git & GitHub</div>
+
+<div class="skill">Linux</div>
+
+<div class="skill">Ansible</div>
+
+<div class="skill">Prometheus</div>
+
+<div class="skill">Grafana</div>
+
+<div class="skill">NGINX</div>
+
+<div class="skill">Bash</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="projects">
+
+<div class="project">
+
+<h3>CI/CD Pipeline</h3>
+
+<p>
+
+Built CI/CD pipeline using Jenkins, Docker and GitHub Actions.
+
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Kubernetes Cluster</h3>
+
+<p>
+
+Created Production Kubernetes Cluster using kubeadm.
+
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>AWS Infrastructure</h3>
+
+<p>
+
+Provisioned Infrastructure using Terraform on AWS.
+
+</p>
+
+</div>
+
+<div class="project">
+
+<h3>Monitoring Stack</h3>
+
+<p>
+
+Implemented Prometheus + Grafana Monitoring Solution.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<p>Email: your@email.com</p>
+
+<p>Location: Cairo, Egypt</p>
+
+<div class="social">
+
+<a href="https://linkedin.com/in/yourprofile">LinkedIn</a>
+
+<a href="https://github.com/yourgithub">GitHub</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Mohamed Sobh - All Rights Reserved
+
+</footer>
+
+</body>
+</html>
