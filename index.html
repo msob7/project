@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mohamed Sobh | DevOps Engineer</title>
+<title>Mohamed Sobh | Senior DevOps Engineer</title>
 
 <style>
 *{
@@ -11,6 +11,10 @@
     padding:0;
     box-sizing:border-box;
     font-family:Arial,Helvetica,sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
@@ -47,6 +51,7 @@ nav ul li{
 nav ul li a{
     color:white;
     text-decoration:none;
+    transition:.3s;
 }
 
 nav ul li a:hover{
@@ -54,26 +59,46 @@ nav ul li a:hover{
 }
 
 .hero{
-    height:90vh;
+    min-height:90vh;
     display:flex;
     justify-content:center;
     align-items:center;
-    text-align:center;
     padding:20px;
 }
 
-.hero h1{
+.hero-container{
+    width:100%;
+    max-width:1200px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:60px;
+}
+
+.hero-image img{
+    width:320px;
+    height:320px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid #38bdf8;
+    box-shadow:0 0 25px rgba(56,189,248,.5);
+}
+
+.hero-content{
+    flex:1;
+}
+
+.hero-content h1{
     font-size:55px;
 }
 
-.hero h2{
+.hero-content h2{
     color:#38bdf8;
     margin:15px 0;
 }
 
-.hero p{
+.hero-content p{
     max-width:700px;
-    margin:auto;
 }
 
 .btn{
@@ -85,6 +110,10 @@ nav ul li a:hover{
     border-radius:8px;
     text-decoration:none;
     font-weight:bold;
+}
+
+.btn:hover{
+    opacity:.9;
 }
 
 section{
@@ -137,15 +166,11 @@ footer{
 
 .social a{
     color:#38bdf8;
-    margin:10px;
+    margin-right:15px;
     text-decoration:none;
 }
 
 @media(max-width:768px){
-
-.hero h1{
-font-size:38px;
-}
 
 nav{
 flex-direction:column;
@@ -157,10 +182,29 @@ flex-wrap:wrap;
 justify-content:center;
 }
 
+.hero-container{
+flex-direction:column;
+text-align:center;
+}
+
+.hero-content{
+text-align:center;
+}
+
+.hero-image img{
+width:220px;
+height:220px;
+}
+
+.hero-content h1{
+font-size:38px;
+}
+
 }
 </style>
 
 </head>
+
 <body>
 
 <header>
@@ -170,15 +214,10 @@ justify-content:center;
 <h2>Mohamed Sobh</h2>
 
 <ul>
-
 <li><a href="#about">About</a></li>
-
 <li><a href="#skills">Skills</a></li>
-
 <li><a href="#projects">Projects</a></li>
-
 <li><a href="#contact">Contact</a></li>
-
 </ul>
 
 </nav>
@@ -187,21 +226,29 @@ justify-content:center;
 
 <section class="hero">
 
-<div>
+<div class="hero-container">
+
+<div class="hero-image">
+
+<img src="profile.jpg" alt="Mohamed Sobh">
+
+</div>
+
+<div class="hero-content">
 
 <h1>Mohamed Sobh</h1>
 
 <h2>Senior DevOps Engineer</h2>
 
 <p>
-
 Experienced DevOps Engineer with expertise in AWS, Docker,
 Kubernetes, Terraform, Jenkins, Linux, CI/CD Pipelines,
-Monitoring, and Infrastructure Automation.
-
+Monitoring, Infrastructure Automation, and Cloud Computing.
 </p>
 
 <a class="btn" href="cv.pdf">Download CV</a>
+
+</div>
 
 </div>
 
@@ -212,12 +259,12 @@ Monitoring, and Infrastructure Automation.
 <h2 class="section-title">About Me</h2>
 
 <p>
-
-I am a DevOps Engineer with extensive experience in
-Infrastructure, Automation, Cloud Computing, CI/CD,
-Containerization, and System Administration.
-I enjoy building scalable, secure, and automated environments.
-
+Results-driven Senior DevOps Engineer with extensive experience in
+Infrastructure, Automation, Cloud Computing, CI/CD Pipelines,
+Containerization, Linux Administration, Monitoring, and Security.
+Passionate about building scalable, reliable, and highly available
+cloud environments using AWS, Docker, Kubernetes, Terraform,
+Jenkins, and modern DevOps practices.
 </p>
 
 </section>
@@ -229,27 +276,16 @@ I enjoy building scalable, secure, and automated environments.
 <div class="skills">
 
 <div class="skill">AWS</div>
-
 <div class="skill">Docker</div>
-
 <div class="skill">Kubernetes</div>
-
 <div class="skill">Terraform</div>
-
 <div class="skill">Jenkins</div>
-
 <div class="skill">Git & GitHub</div>
-
 <div class="skill">Linux</div>
-
 <div class="skill">Ansible</div>
-
 <div class="skill">Prometheus</div>
-
 <div class="skill">Grafana</div>
-
 <div class="skill">NGINX</div>
-
 <div class="skill">Bash</div>
 
 </div>
@@ -263,51 +299,35 @@ I enjoy building scalable, secure, and automated environments.
 <div class="projects">
 
 <div class="project">
-
 <h3>CI/CD Pipeline</h3>
-
 <p>
-
-Built CI/CD pipeline using Jenkins, Docker and GitHub Actions.
-
+Built automated CI/CD pipelines using Jenkins, Docker, GitHub,
+and Infrastructure as Code.
 </p>
-
 </div>
 
 <div class="project">
-
 <h3>Kubernetes Cluster</h3>
-
 <p>
-
-Created Production Kubernetes Cluster using kubeadm.
-
+Designed and deployed Kubernetes clusters using kubeadm with
+production-ready configuration.
 </p>
-
 </div>
 
 <div class="project">
-
 <h3>AWS Infrastructure</h3>
-
 <p>
-
-Provisioned Infrastructure using Terraform on AWS.
-
+Provisioned scalable cloud infrastructure using Terraform on AWS,
+including EC2, VPC, IAM, S3 and Load Balancers.
 </p>
-
 </div>
 
 <div class="project">
-
 <h3>Monitoring Stack</h3>
-
 <p>
-
-Implemented Prometheus + Grafana Monitoring Solution.
-
+Implemented monitoring solutions using Prometheus, Grafana,
+and Alertmanager for infrastructure visibility.
 </p>
-
 </div>
 
 </div>
@@ -318,24 +338,31 @@ Implemented Prometheus + Grafana Monitoring Solution.
 
 <h2 class="section-title">Contact</h2>
 
-<p>Email: Mohamedsobh@ymail.com</p>
+<p><strong>Email:</strong> Mohamedsobh@ymail.com</p>
 
-<p>Location: Cairo, Egypt</p>
+<p><strong>Location:</strong> Cairo, Egypt</p>
 
 <div class="social">
 
-<a href="https://www.linkedin.com/in/mohamed-sobh-a2152225/">LinkedIn</a>
+<a href="https://www.linkedin.com/in/mohamed-sobh-a2152225/" target="_blank">
+LinkedIn
+</a>
 
-<a href="https://github.com/msob7/project.git">GitHub</a>
+<a href="https://github.com/msob7" target="_blank">
+GitHub
+</a>
+
 </div>
 
 </section>
 
 <footer>
 
-© 2026 Mohamed Sobh - All Rights Reserved
+<p>© 2026 Mohamed Sobh | All Rights Reserved</p>
 
 </footer>
 
 </body>
 </html>
+
+
